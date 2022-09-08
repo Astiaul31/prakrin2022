@@ -1,3 +1,6 @@
+@extends('layouts.admin')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +11,10 @@
 </head>
 <body> <center>
     <h1>Hallo</h1>
-    Selamat datang di webapp saya. <br>
-    Laravel, emang keren banget!
+    <h3>
+    <i>Selamat datang di website admin.</i> <br>
+    </h3>
     </center>
 </body>
 </html>
+@endsection

@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,12 @@
                         </div>
                     @endif
 
-                    {{ __('Selamat Anda Berhasil Login!') }}
+                    <!-- {{ __('Selamat Datang Di Website Kami') }} -->
+                    <center>
+                        <h3>
+                       <i>Selamat Datang di Website Admin</i>
+                        </h3>
+                    </center>
                 </div>
             </div>
         </div>

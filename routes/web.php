@@ -29,17 +29,29 @@ Route::get('/about', 'MyController@showAbout');
    
 Auth::routes();
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::group(['middlewere' => ['auth'], 'prefix' => 'client-area'], function (){
-        Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 });
 
 Route::group(['prefix' => 'admin', 'middlewere' => ['auth', 'isAdmin']], function (){
     Route::get('profile', function () {
         return view('profile');
     });
+
+    Route::get('/home', function () {
+        return view('home');
+    });
+
+    Route::get('/about', function () {
+        return view('about');
+    });
 });
+
+
 Route::get('/errors', function () {
     return view('403');
 });
 
+Route::get('/test-admin', function(){
+    return view('layouts.admin');
+});
